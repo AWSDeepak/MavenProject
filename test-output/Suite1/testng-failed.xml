@@ -5,7 +5,6 @@
     <classes>
       <class name="SeleniumGrid_Pipeline.SeleniumGrid_Pipeline.ParallelTest">
         <methods>
-          <include name="grid1"/>
           <include name="grid"/>
         </methods>
       </class> <!-- SeleniumGrid_Pipeline.SeleniumGrid_Pipeline.ParallelTest -->

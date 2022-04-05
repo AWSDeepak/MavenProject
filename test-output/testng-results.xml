@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-05T14:28:14 IST" name="Default suite" finished-at="2022-04-05T14:28:29 IST" duration-ms="15394">
+  <suite started-at="2022-04-05T15:28:35 IST" name="Suite1" finished-at="2022-04-05T15:28:50 IST" duration-ms="15166">
     <groups>
     </groups>
-    <test started-at="2022-04-05T14:28:14 IST" name="Default test" finished-at="2022-04-05T14:28:29 IST" duration-ms="15394">
+    <test started-at="2022-04-05T15:28:35 IST" name="Regression1" finished-at="2022-04-05T15:28:50 IST" duration-ms="15166">
       <class name="SeleniumGrid_Pipeline.SeleniumGrid_Pipeline.ParallelTest">
-        <test-method signature="grid()[pri:0, instance:SeleniumGrid_Pipeline.SeleniumGrid_Pipeline.ParallelTest@2f7298b]" started-at="2022-04-05T14:28:14 IST" name="grid" finished-at="2022-04-05T14:28:29 IST" duration-ms="15286" status="FAIL">
+        <test-method signature="grid()[pri:0, instance:SeleniumGrid_Pipeline.SeleniumGrid_Pipeline.ParallelTest@20deea7f]" started-at="2022-04-05T15:28:35 IST" name="grid" finished-at="2022-04-05T15:28:50 IST" duration-ms="15066" status="FAIL">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
@@ -45,18 +45,13 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
 Caused by: java.io.UncheckedIOException: java.net.ConnectException: connection timed out: ec2-65-2-35-95.ap-south-1.compute.amazonaws.com/65.2.35.95:4444
 at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:80)
 at org.openqa.selenium.remote.http.RetryRequest.lambda$apply$6(RetryRequest.java:83)
@@ -90,7 +85,7 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
 at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-... 32 more
+... 27 more
 Caused by: java.net.ConnectException: connection timed out: ec2-65-2-35-95.ap-south-1.compute.amazonaws.com/65.2.35.95:4444
 at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
 at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
@@ -112,7 +107,7 @@ at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
 at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
 at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.base/java.lang.Thread.run(Thread.java:833)
+... 1 more
 Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: ec2-65-2-35-95.ap-south-1.compute.amazonaws.com/65.2.35.95:4444
 at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:261)
 ... 9 more
@@ -123,6 +118,6 @@ at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioCh
           </reporter-output>
         </test-method> <!-- grid -->
       </class> <!-- SeleniumGrid_Pipeline.SeleniumGrid_Pipeline.ParallelTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Regression1 -->
+  </suite> <!-- Suite1 -->
 </testng-results>

@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.param,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.param td,table.param th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.param th {vertical-align:bottom}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.param td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.param tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Regression1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">14.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<a id="summary"></a>
+<table cellspacing=0 cellpadding=0 class="passed">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Time<br/>(Msecs)</th></tr>
+<tr><th colspan="4">Regression1 &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">SeleniumGrid_Pipeline.SeleniumGrid_Pipeline.ParallelTest<td><a href="#m1"><b>grid</b>  </a></td><td class="numi">1</td><td class="numi">14677</td></tr>
+</table>
+<h1>Regression1</h1>
+<a id="m1"></a><h2>SeleniumGrid_Pipeline.SeleniumGrid_Pipeline.ParallelTest:grid</h2>
+<div style="padding-left:3em">
+<p>Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;DESKTOP-KBNFBKF&apos;, ip: &apos;172.31.224.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--headless], extensions: []}, platformName: windows}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--headless], extensions: []}, platformName: WINDOWS}}]
+Capabilities {}</p>
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:138)
+<br/>at SeleniumGrid_Pipeline.SeleniumGrid_Pipeline.ParallelTest.grid(ParallelTest.java:33)
+<br/>20 lines not shown
+<p>Caused by java.net.ConnectException: connection timed out: ec2-65-2-35-95.ap-south-1.compute.amazonaws.com/65.2.35.95:4444</p>
+org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:80)
+<br/>at org.openqa.selenium.remote.http.RetryRequest.lambda$apply$6(RetryRequest.java:83)
+<br/>at net.jodah.failsafe.Functions.lambda$get$0(Functions.java:48)
+<br/>at net.jodah.failsafe.RetryPolicyExecutor.lambda$supply$0(RetryPolicyExecutor.java:66)
+<br/>at net.jodah.failsafe.RetryPolicyExecutor.lambda$supply$0(RetryPolicyExecutor.java:66)
+<br/>at net.jodah.failsafe.RetryPolicyExecutor.lambda$supply$0(RetryPolicyExecutor.java:66)
+<br/>at net.jodah.failsafe.Execution.executeSync(Execution.java:128)
+<br/>at net.jodah.failsafe.FailsafeExecutor.call(FailsafeExecutor.java:379)
+<br/>at net.jodah.failsafe.FailsafeExecutor.get(FailsafeExecutor.java:68)
+<br/>at org.openqa.selenium.remote.http.RetryRequest.lambda$apply$7(RetryRequest.java:83)
+<br/>at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+<br/>at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+<br/>at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:51)
+<br/>at org.openqa.selenium.remote.http.RetryRequest.lambda$apply$6(RetryRequest.java:83)
+<br/>at net.jodah.failsafe.Functions.lambda$get$0(Functions.java:48)
+<br/>at net.jodah.failsafe.RetryPolicyExecutor.lambda$supply$0(RetryPolicyExecutor.java:66)
+<br/>at net.jodah.failsafe.RetryPolicyExecutor.lambda$supply$0(RetryPolicyExecutor.java:66)
+<br/>at net.jodah.failsafe.RetryPolicyExecutor.lambda$supply$0(RetryPolicyExecutor.java:66)
+<br/>at net.jodah.failsafe.Execution.executeSync(Execution.java:128)
+<br/>at net.jodah.failsafe.FailsafeExecutor.call(FailsafeExecutor.java:379)
+<br/>at net.jodah.failsafe.FailsafeExecutor.get(FailsafeExecutor.java:68)
+<br/>at org.openqa.selenium.remote.http.RetryRequest.lambda$apply$7(RetryRequest.java:83)
+<br/>at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+<br/>at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+<br/>at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:110)
+<br/>at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:55)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+<br/>at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:138)
+<br/>at SeleniumGrid_Pipeline.SeleniumGrid_Pipeline.ParallelTest.grid(ParallelTest.java:33)
+<br/>20 lines not shown
+<p>Caused by connection timed out: ec2-65-2-35-95.ap-south-1.compute.amazonaws.com/65.2.35.95:4444</p>
+org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
+<br/>at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
+<br/>at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)
+<br/>at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
+<br/>at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+<br/>at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+<br/>at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+<br/>at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+<br/>at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+<br/>at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609)
+<br/>at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117)
+<br/>at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:262)
+<br/>at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+<br/>at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+<br/>at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+<br/>at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469)
+<br/>at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+<br/>at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+<br/>at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+<br/>at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+<br/>at java.base/java.lang.Thread.run(Thread.java:833)
+<br/>1 lines not shown
+<p>Caused by connection timed out: ec2-65-2-35-95.ap-south-1.compute.amazonaws.com/65.2.35.95:4444</p>
+io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:261)
+<br/>at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+<br/>at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+<br/>at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+<br/>at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469)
+<br/>at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+<br/>at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+<br/>at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+<br/>at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+<br/>at java.base/java.lang.Thread.run(Thread.java:833)
+<br/>1 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

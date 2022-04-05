@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite1]" verbose="0">
+  <test parallel="tests" name="Regression1(failed)" preserve-order="true">
+    <classes>
+      <class name="SeleniumGrid_Pipeline.SeleniumGrid_Pipeline.ParallelTest">
+        <methods>
+          <include name="grid"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

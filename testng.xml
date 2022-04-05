@@ -5,7 +5,7 @@
   <test name="Regression1">
     <classes>
       <class name="SeleniumGrid_Pipeline.SeleniumGrid_Pipeline.ParallelTest"/>
-
+      
     </classes>
   </test>
 </suite>
